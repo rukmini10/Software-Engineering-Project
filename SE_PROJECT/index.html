@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <link rel="icon" type="favicon" href="images/hall.png">
+  <title>HALL MANAGEMENT SYSTEM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/977378c28a.js" crossorigin="anonymous"></script> 
+  <link href="floating-labels.css" rel="stylesheet">
+  <style>
+
+@media only screen and (max-width: 1024px){
+  .nav-link{
+    font-size: 35px;
+  }
+}
+    #navigation{
+      background-color:transparent; 
+    }
+    ul li.active a{
+          background-color: #0086b3;
+          color: #FF0000;
+     }
+    ul li a:hover{
+         background-color: #0083b3;
+         color: #000;
+}
+    .nav-item{
+      font-size: 18px;
+      padding: 0px 20px 0px 20px;
+
+    }
+    .nav-link{
+      color: white !important;
+    }
+    .nav-link:hover{
+      color: black !important;
+    }
+  
+    #exampleModal{
+      color: black !important;
+    }
+
+
+
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 13px;
+    transition: all 200ms;
+    color: grey;
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+input.form-control:focus,
+input.form-control:after {
+    outline-width: 0;
+    border-bottom: 1px solid aqua;
+    background: transparent;
+}
+
+.modal-content {
+    color: white;
+    background-image: radial-gradient(circle 919px at 1.7% 6.1%, rgb(12, 12, 12) 0%, rgba(14, 14, 14, 0.85) 100.2%);
+}
+
+.modal-title {
+    color: aqua
+}
+
+
+
+.tc {
+    font-size: 12px
+}
+
+.modal-footer {
+    justify-content: flex-start
+}
+
+.signup {
+    background: rgb(20, 155, 224);
+    background: linear-gradient(90deg, rgba(20, 155, 224, 1) 0%, rgba(0, 49, 78, 1) 100%);
+    border-radius: 34rem;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    height: 46px;
+}
+
+.close {
+    color: aqua;
+    font-size: 12px;
+    position: relative;
+    top: 20px
+}
+
+h5 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.x {
+    color: grey;
+    font-size: 40px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row-reverse;
+    top: 0;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.x.focus,
+.x:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+.modal-footer{
+  justify-content: space-around;
+}
+.page-footer{
+  background-image: radial-gradient(circle 919px at 1.7% 6.1%, rgb(12, 12, 12) 0%, rgba(14, 14, 14, 0.85) 100.2%);
+}
+h1{font-weight: bold;}
+h4{color: aqua;}
+.rounded-circle{
+  width: 150px;
+  height: 150px;
+}
+.col-sm{
+  color: white;
+}
+.home{
+  min-height: 100vh;
+  background-image: url("https://wallpaperaccess.com/full/1751008.jpg");
+
+  /*("images/home-bg.jpg");*/
+filter: brightness(2.5);
+  background-size: cover;
+  background-position: center;
+  float: left;
+  width: 100%;
+  padding:0px 15px;
+  position: relative;
+}
+
+.home::before{
+  content: '';
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #000000;
+  opacity: 0.7;
+}
+
+.home .home-text{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: auto;
+  z-index: 10;
+}
+
+.home .home-text h1{
+  font-size:35px;
+  color:#ffffff;
+  margin:10px 0px;
+  font-weight:400;
+  animation: slideLeft 1.5s ease;
+}
+.home .home-text h3{
+  font-size:60px;
+  color:white;
+  margin:15px 0px 0px;
+  font-weight:800;
+  animation: slideRight 1.5s ease;
+}
+
+
+h2{
+  text-align: right;
+  padding-right: 10%;
+  font-weight: bold;
+  font-family: calibri;
+ margin-left: 55%;
+  font-size: 350%;
+  color:#ffffff;
+}
+}
+  </style>
+
+</head>
+
+<body style="font-family: calibri; color: black !important;">
+
+
+
+  <!--navbar-->
+
+<nav class="navbar navbar-expand-xl navbar-light fixed-top" id="navigation">
+
+   <div class="navbar-brand"><a href=""></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <!-- Links -->
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       
+        <ul class="navbar-nav ml-auto">
+          <li class="active"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="Hall.html">ABOUT HALLS </a></li>
+          <li class="nav-item"><a class="nav-link" href="http://localhost/SE_PROJECT/login-register/login.php">BOOKING</a></li>
+          
+           <li class="nav-item"><a class="nav-link" href="http://localhost/SE_PROJECT/login-register/login.php">LOGIN</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://localhost/SE_PROJECT/login-register/register.php">REGISTER</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://localhost/SE_PROJECT/contactus/">CONTACT</a></li>
+          
+        </ul>
+
+    </div>
+    </nav> 
+</div>
+
+  <!--navbar ends-->
+
+
+
+
+
+<!--home-->
+
+<section class="home" id="home">
+       <div class="container">
+          
+           </div>
+       </div><br><br><br><br><br><br><br><br>
+  <h2>We do not  <br>
+remember <br>
+the days, <br>
+but rather the  <br>
+  Moments...<br>
+ >>------------<<
+</h2> 
+    </section>
+ 
+
+
+    <!--end-->
+
+   
+  <footer class="page-footer">
+      <div class="container">
+      <center>
+      <div><h1 style="color: white;">About Us</h1></div><br>
+      <div class="row">
+        <div class="col-sm">
+          <img src="images/rukmini.jpg" class="rounded-circle" >
+          <h5 class="text-center">Rukmini</h5>
+          <p>Data Science</p>
+        </div>
+        <div class="col-sm">
+          <img src="images/poojitha.jpg" class="rounded-circle" >
+          <h5>Poojitha</h5>
+          <p>Data Science</p>
+        </div>
+        <div class="col-sm">
+          <img src="images/spandana.jpg" class="rounded-circle" >
+          <h5>Spandana</h5>
+          <p>Data Science</p>
+        </div>
+     </div>
+   </center>
+   </div>
+    </footer>
+
+
+  <!-- search bar starts-->
+    <div data-role="pages">
+    <div data-role="header">
+      <h1>Search For Halls</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+      <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="search any halls.......">
+        <li><a href="http://localhost/SE_PROJECT/Hall.html">Naming Ceremony</a></li>
+        <li><a href="http://localhost/SE_PROJECT/Hall.html">Birthday Party</a></li>
+        <li><a href="http://localhost/SE_PROJECT/Hall.html">Wedding</a></li>
+        <li><a href="http://localhost/SE_PROJECT/Hall.html">Engagement</a></li>
+        <li><a href="http://localhost/SE_PROJECT/Hall.html">Banquet Services</a></li> 
+        <li><a href="http://localhost/SE_PROJECT/Hall.html">Theme Parties</a></li>  
+      </ul>
+      
+    </div>
+    
+  </div>
+</div>
+<!--search bar ends-->
+
+    <div class="footer-copyright text-center py-3 text-white bg-dark">© 2021 Copyright:
+    <a href="index.html" style="text-decoration: none;">HALLS</a>
+  </div>
+
+
+</body>
+
+ 
+
+</html>
